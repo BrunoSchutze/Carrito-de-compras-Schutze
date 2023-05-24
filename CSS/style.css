@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap'); /*fuente*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;/*quita las lineas de los link*/
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif; /*fuente*/
+    background-color: #000000;/*color de fondo de la pagina*/
+}
+
+.container{ /*que se matenga el contenido a esa medidas*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/*comienzo index*/
+
+
+/*comienzo header*/
+
+.header{ 
+    background-image: linear-gradient(/*oscurese la imagen*/
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2)),
+        url(../images/fondo-index1.jpg);/* imagen de fondo*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /*cubre todo el contenido*/
+    display: flex;
+    align-items: center;
+    min-height: 70vh;/*definicion de altura*/
+    
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex; /*forma horizontal*/
+    align-items: center; /*centra el menu*/
+    justify-content: space-between; /*deja separacion*/
+}
+
+.logo{
+    color: aliceblue;/*color del logo*/
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.logo-menu{
+    width: 70px;
+    height: 70px;
+    padding-left: 15px;
+    
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left; /*lo manda a la izquierda*/
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: aliceblue;
+    display: block; 
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: #000f25;
+}
+
+#menu{
+    display: none; /*lo oculta*/
+}
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;/* le da efecto de "link" al cursor*/
+    display: none;
+}
+.submenu{
+    position: relative;
+}
+
+.submenu #img-carrito{
+    padding-right: 15px;
+}
+
+.submenu #carrito{
+    display: none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px); /*hace que se vea un poco mas opaco*/
+    top: 100%;
+    z-index: 1;
+    background-color: #282A3A;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table{
+    width: 100px;
+}
+
+th, td{
+    color:#ffff;/*color de las letras de arriba del carrito*/
+}
+
+.borrar{
+    background-color: rgb(104, 21, 0);
+    border-radius: 100%;
+    padding: 0px 5px;
+    color: aliceblue;
+    font-weight: 800;
+}
+.header-txt{
+    padding: 0 200px;
+    text-align: center;
+}
+
+.header-txt h1{
+    font-size: 70px;
+    line-height: 80px;/*tamaño de la letra*/
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.header-txt p{
+    font-size: 16px;
+    color: #F1F6F9;
+}
+
+/*iconos*/
+
+.iconos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*separacion entre los iconos*/
+    background-color: #F1F6F9; /*color de fondo*/
+    padding: 5px;
+}
+
+.icono img{
+    width: 30px;
+}
+
+/*comienzan los productos del index*/
+
+.products{
+    padding: 70px 0 0 0;
+    text-align: center;
+
+}
+
+.tamaño-img{ /*tamaño de las imagenes de los productos*/
+    width: 550px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+h2{
+    color: #F1F6F9;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.products-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/*acomoda las imagenes*/
+    grid-gap: 35px;
+}
+
+.product img{
+    width: 250px;/*tamaño de las imagenes*/
+}
+
+.product h3{
+    font-size: 20px;
+    color: #735F32;
+    margin-bottom: 10px;
+}
+
+.product p{
+    font-size: 16px;
+    color: #F1F6F9;
+    margin-bottom: 10px;
+}
+
+.precio{
+    color: #C69749 !important;/*(important) le da proridad*/
+}
+
+.btn-2{
+    display: inline-block;
+    padding: 8px 17px;
+    border: 1px solid #ffff;
+    border-radius: 20px;
+    color: #ffff;
+}
+
+.btn-2:hover{
+    background-color: #735F32;/*le da el color de fondo al boton*/
+}
+
+/*comienza los servicios*/
+
+.services{
+    margin-top: 100px;
+    padding:  40px 20px;
+    background-color: #000f25;
+    text-align: center;
+}
+.services h2{
+    color: #F1F6F9;/*le da el color a los titulos*/
+}
+
+.services .services-content{ /*divide en 4 cuardros*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 35px;
+}
+
+.service{ /*sombra*/
+    background-color: aliceblue;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);/*le da una sombra a los boxes*/
+    padding: 35px;
+    text-align: left;
+}
+
+.service h3{
+    font-size: 20px;
+    color: #585858;
+    margin-bottom: 10px;
+}
+
+.service hr{
+    width: 100px;
+    border: 2px solid #adc719;/*color de subrayado titulos boxes*/
+}
+
+.service p{
+    font-size: 16px;
+    color: #000000;/*color de la letra del contenido de los boxes*/
+    margin-top: 15px;
+}
+
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 55px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+
+/*FOOTER*/
+
+.pie-pagina{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 25px 0px 0px 0px;
+    
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: #000000;/*color de los titulos boxes*/
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: #233e21;/*color de las letras 2 box*/
+    margin-bottom: 10px;
+}
+
+.links{
+    color: #000000;/*color de las letras 3 box*/
+    display: flex;
+    font-size: 15px;
+    line-height: 35px;
+}
+
+.icon{
+    font-size: 25px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.icon:hover{
+    background-color:#F1F6F9;
+}
+
+.pie-pagina hr{
+    border: none;
+}
+
+.pie-pagina .copy{
+    position: relative;
+    display: flex;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+/*Inicio Pagina Nosotros*/
+
+
+.nosotros{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.nosotros p{
+    color: #F1F6F9;
+    padding-bottom: 25px;
+}
+
+.section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000f25;
+}
+
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.content-section{
+    float: left;
+    width: 55%;
+}
+
+.image-section{
+    float: right;
+    width: 40%;
+}
+
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+
+.content-section .title{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.content-section .title h2{
+    color: #adc719;
+    text-align: left;
+}
+
+.content-section .content h4{
+    margin-top: 20px;
+    color: #c71919;
+    font-size: 21px;
+}
+
+.content-section .content p{
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #F1F6F9;
+}
+
+.content-section .redes-propietario{
+    margin-top: 40px 40px;
+}
+
+.content-section .redes-propietario i{
+    color: #233e21;
+    font-size: 30px;
+    padding: 0px 10px;
+}
+
+
+/*Inicio Pagina Contactos*/
+
+
+.container-form{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 90px;
+    padding: 10px ;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.container-form h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.container-form p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #F1F6F9;
+}
+
+.container-form .tamaño-logo{
+    width: 130px;
+    height: 130px;
+}
+
+.container-form a{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.container-form form .campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #C69749;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+.container-form form textarea{
+    max-width: 530px;
+    min-height: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+
+.container-form .btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background-color: rgb(2, 53, 148);
+    color: wheat;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.container-form .btn-enviar:hover{
+    background: #1996c7;
+}
+
+.info-form{
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+
+.ubicacion h2{
+    text-align: center;
+}
+
+.ubicacion .mapa{ /*mapa de la empresa*/
+    width: 1300px;
+    height: 400px;
+    padding-left: 35px;
+    
+}
+
+/*inicio responsive*/
+
+@media(max-width:991px){
+
+    .menu{
+        padding: 20px;
+    }
+    
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top:100px;
+        left: 0;
+        right: 0;
+        background-color: #212A3E;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100px;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .header{
+        min-height: 0vh;
+    }
+
+    .header-content{
+        padding: 100px 30px;
+    }
+
+    .header-txt{
+        padding: 0;
+    }
+
+    .products {
+        padding: 30px;
+    }
+
+    .products-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services{
+        padding: 30px;
+        margin: 0;
+    }
+
+    .servicios-contenido{
+        grid-template-columns: repeat(2, 1fr
+        );
+    }
+
+}
