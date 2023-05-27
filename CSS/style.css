@@ -4,7 +4,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    text-decoration: none;/*quita las lineas de los link*/
     list-style: none;
 }
 body{
@@ -17,7 +16,9 @@ body{
     margin: 0 auto;
 }
 
-
+body div a{
+    text-decoration: none;
+}
 
 /*comienzo index*/
 
@@ -28,7 +29,7 @@ body{
     background-image: linear-gradient(/*oscurese la imagen*/
         rgba(0,0,0,0.2),
         rgba(0,0,0,0.2)),
-        url(../images/fondo-index1.jpg);/* imagen de fondo*/
+        url("../images/fondo-index1.jpg");/* imagen de fondo*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; /*cubre todo el contenido*/
@@ -45,43 +46,37 @@ body{
     right: 0;
     display: flex; /*forma horizontal*/
     align-items: center; /*centra el menu*/
-    justify-content: space-between; /*deja separacion*/
+    justify-content: space-between;/*deja separacion*/
 }
 
-.logo{
-    color: aliceblue;/*color del logo*/
-    font-size: 45px;
-    font-weight: 800;
-}
-
-.logo-menu{
+.logo-menu{ /*imagen del logo del menu*/
     width: 70px;
-    height: 70px;
+    height: 60px;
     padding-left: 15px;
-    
+    cursor: pointer;
 }
 
 .menu .navbar ul li{
     position: relative;
-    float: left; /*lo manda a la izquierda*/
+    float: left;
 }
 
-.menu .navbar ul li a{
+.menu .navbar ul li a{ /*letras del menu*/
     font-size: 18px;
     padding: 20px;
-    color: aliceblue;
+    color: #F1F6F9; /*color de las letras del menu*/
     display: block; 
     font-weight: 600;
 }
 
-.menu .navbar ul li a:hover{
+.menu .navbar ul li a:hover{ /*le da color cuando paso el cursor a las letras del menu*/
     color: #000f25;
 }
 
 #menu{
-    display: none; /*lo oculta*/
+    display: none; /*oculta*/
 }
-.menu-icono{
+.menu-icono{ /*ancho del logo hamburguesa del menu*/
     width: 25px;
 }
 
@@ -107,14 +102,14 @@ body{
     right: 0;
     backdrop-filter: blur(10px); /*hace que se vea un poco mas opaco*/
     top: 100%;
-    z-index: 1;
-    background-color: #282A3A;
+    z-index: 1;/*hace que se posiciones adelante*/
+    background-color: #4E4B5076;
     padding: 20px;
     min-width: 400px;
 }
 
 table{
-    width: 100px;
+    width: 100%;
 }
 
 th, td{
@@ -152,11 +147,11 @@ th, td{
     align-items: center;
     justify-content: space-between; /*separacion entre los iconos*/
     background-color: #F1F6F9; /*color de fondo*/
-    padding: 5px;
+    padding: 10px;
 }
 
 .icono img{
-    width: 30px;
+    width: 40px;
 }
 
 /*comienzan los productos del index*/
@@ -176,9 +171,9 @@ th, td{
 h2{
     color: #F1F6F9;
     font-size: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 0px;
 }
 
 .products-content{
@@ -187,24 +182,26 @@ h2{
     grid-gap: 35px;
 }
 
+
 .product img{
     width: 250px;/*tamaño de las imagenes*/
 }
 
 .product h3{
     font-size: 20px;
-    color: #735F32;
+    color: #F1F6F9;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .product p{
     font-size: 16px;
-    color: #F1F6F9;
+    color: #585858;
     margin-bottom: 10px;
 }
 
-.precio{
-    color: #C69749 !important;/*(important) le da proridad*/
+.product .precio{
+    color: #C69749;
 }
 
 .btn-2{
@@ -216,14 +213,14 @@ h2{
 }
 
 .btn-2:hover{
-    background-color: #735F32;/*le da el color de fondo al boton*/
+    background-color: #000f25;/*le da el color de fondo al boton*/
 }
 
 /*comienza los servicios*/
 
 .services{
     margin-top: 100px;
-    padding:  40px 20px;
+    padding:  30px 20px;
     background-color: #000f25;
     text-align: center;
 }
@@ -298,12 +295,10 @@ h2{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.pie-pagina .grupo-1 .box figure img{
-    width: 250px;
+.pie-pagina figure img{
+    width: 225px;
 }
 
 .pie-pagina .grupo-1 .box h2{
@@ -313,7 +308,7 @@ h2{
 }
 
 .pie-pagina .grupo-1 .box p{
-    color: #233e21;/*color de las letras 2 box*/
+    color: #000000;/*color de las letras 2 box*/
     margin-bottom: 10px;
 }
 
@@ -344,7 +339,6 @@ h2{
     display: flex;
     text-align: center;
     font-size: 15px;
-
 }
 
 /*Inicio Pagina Nosotros*/
@@ -396,13 +390,13 @@ h2{
 }
 
 .content-section .title h2{
-    color: #adc719;
+    color: #F1F6F9;
     text-align: left;
 }
 
 .content-section .content h4{
     margin-top: 20px;
-    color: #c71919;
+    color: #adc719;
     font-size: 21px;
 }
 
@@ -468,7 +462,7 @@ h2{
     width: 100%;
     padding: 15px 10px;
     font-size: 15px;
-    border: 1px solid #C69749;
+    border: 1px solid #000f25;
     margin-bottom: 20px;
     border-radius: 3px;
     outline: 0px;
@@ -487,7 +481,7 @@ h2{
     border: none;
     outline: 0px;
     background-color: rgb(2, 53, 148);
-    color: wheat;
+    color: #F1F6F9;
     border-radius: 3px;
     cursor: pointer;
     transition: all 300ms ease;
@@ -508,10 +502,10 @@ h2{
 }
 
 .ubicacion .mapa{ /*mapa de la empresa*/
-    width: 1300px;
+    width: 100%;
     height: 400px;
     padding-left: 35px;
-    
+    padding-right: 35px;
 }
 
 /*inicio responsive*/
@@ -528,23 +522,41 @@ h2{
 
     .menu .navbar{
         position: absolute;
-        top:100px;
+        top:100%;
         left: 0;
         right: 0;
         background-color: #212A3E;
         display: none;
+        
     }
 
     .menu .navbar ul li{
-        width: 100px;
+        width: 100%;
     }
 
     #menu:checked ~ .navbar{
         display: initial;
     }
 
-    .logo{
+    .submenu:hover #carrito{
+        min-width: 320px;
+    }
+    
+
+    .logo-menu{
         display: none;
+    }
+
+    .iconos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /*separacion entre los iconos*/
+        background-color: #F1F6F9; /*color de fondo*/
+        padding: 5px;
+    }
+    
+    .icono img{
+        width: 15px;
     }
 
     .header{
@@ -571,10 +583,101 @@ h2{
         padding: 30px;
         margin: 0;
     }
+    
+    .services .services-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    /*NOSOTROS*/
+    
+    .container{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+    }
 
-    .servicios-contenido{
-        grid-template-columns: repeat(2, 1fr
-        );
+    .content-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .image-section{
+        float: none;
+        width: 100%;
+    }
+
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .content-section .title{
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .content-section .redes-propietario{
+        text-align: center;
+    }
+
+    .section{
+        padding-bottom: 20px;
+    }
+
+    /*CONTACTO*/
+
+    .container-form{
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 50px;
+        margin-top: 90px;
+        padding: 10px ;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+
+    .container-form .tamaño-logo{
+        display: none;
+    }
+
+
+
+    /* PIE DE PAGINA*/
+    
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+        
+    }
+
+    .pie-pagina .grupo-1 .box p{
+        text-align: center;
+        width: 90%;
+    }
+
+    .links{
+        display: inline;
+    }
+
+    .pie-pagina .grupo-1 .box figure img  {
+        display: none;
+    }
+
+    .pie-pagina figure img{
+        display: none;
     }
 
 }
+
+
+
