@@ -17,12 +17,10 @@ body{
 }
 
 body div a{
-    text-decoration: none;
+    text-decoration: none; /*quita las lineas de los link que bootstrap pone*/
 }
 
 /*comienzo index*/
-
-
 /*comienzo header*/
 
 .header{ 
@@ -56,9 +54,9 @@ body div a{
     cursor: pointer;
 }
 
-.menu .navbar ul li{
+.menu .navbar ul li{ 
     position: relative;
-    float: left;
+    float: left;/*pone en horizontal el menu*/
 }
 
 .menu .navbar ul li a{ /*letras del menu*/
@@ -81,7 +79,7 @@ body div a{
 }
 
 .menu label{
-    cursor: pointer;/* le da efecto de "link" al cursor*/
+    cursor: pointer;/* le da efecto al cursor*/
     display: none;
 }
 .submenu{
@@ -93,7 +91,7 @@ body div a{
 }
 
 .submenu #carrito{
-    display: none;
+    display: none;/*oculta*/
 }
 
 .submenu:hover #carrito{
@@ -109,15 +107,15 @@ body div a{
 }
 
 table{
-    width: 100%;
+    width: 100%;/*modifica el menu de hamburguesa*/
 }
 
 th, td{
-    color:#ffff;/*color de las letras de arriba del carrito*/
+    color:#ffff;/*color de las letras dl menu de hamburguesa*/
 }
 
 .borrar{
-    background-color: rgb(104, 21, 0);
+    background-color: rgb(104, 21, 0);/*color de borrar en el menu de hamburguesa*/
     border-radius: 100%;
     padding: 0px 5px;
     color: aliceblue;
@@ -154,7 +152,7 @@ th, td{
     width: 40px;
 }
 
-/*comienzan los productos del index*/
+/*Comienzan los productos del index y  PAGINA PRODUCTOS*/
 
 .products{
     padding: 70px 0 0 0;
@@ -178,7 +176,7 @@ h2{
 
 .products-content{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);/*acomoda las imagenes*/
+    grid-template-columns: repeat(3, 1fr);/*acomoda las imagenes en 3 columnas*/
     grid-gap: 35px;
 }
 
@@ -187,24 +185,24 @@ h2{
     width: 250px;/*tamaño de las imagenes*/
 }
 
-.product h3{
+.product h3{ /*Titulo de los productos*/
     font-size: 20px;
     color: #F1F6F9;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-.product p{
+.product p{ /*Descripcion de los productos*/
     font-size: 16px;
     color: #585858;
     margin-bottom: 10px;
 }
 
-.product .precio{
+.product .precio{ /*Color de los precios de los productos*/
     color: #C69749;
 }
 
-.btn-2{
+.btn-2{ /*Es el boton para Añadir al carrito*/
     display: inline-block;
     padding: 8px 17px;
     border: 1px solid #ffff;
@@ -213,7 +211,7 @@ h2{
 }
 
 .btn-2:hover{
-    background-color: #000f25;/*le da el color de fondo al boton*/
+    background-color: #000f25;/*le da el color de fondo al boton de añadir al carrito*/
 }
 
 /*comienza los servicios*/
@@ -221,44 +219,44 @@ h2{
 .services{
     margin-top: 100px;
     padding:  30px 20px;
-    background-color: #000f25;
+    background-color: #000f25;/*Color de fondo de los servicios*/
     text-align: center;
 }
 .services h2{
     color: #F1F6F9;/*le da el color a los titulos*/
 }
 
-.services .services-content{ /*divide en 4 cuardros*/
+.services .services-content{ /*divide en 4 cuardros los servicios*/
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);/*Divide en 2 columnas*/
     grid-gap: 35px;
 }
 
 .service{ /*sombra*/
     background-color: aliceblue;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);/*le da una sombra a los boxes*/
+    box-shadow: 0 0 20px rgba(253, 253, 253, 0.2);/*le da una sombra a los boxes*/
     padding: 35px;
     text-align: left;
 }
 
 .service h3{
     font-size: 20px;
-    color: #585858;
+    color: #585858;/*Color de los titulos de los servicios*/
     margin-bottom: 10px;
 }
 
 .service hr{
     width: 100px;
-    border: 2px solid #adc719;/*color de subrayado titulos boxes*/
+    border: 2px solid #adc719;/*color de subrayado de los titulos de los servicios*/
 }
 
 .service p{
     font-size: 16px;
-    color: #000000;/*color de la letra del contenido de los boxes*/
+    color: #000000;/*Color de la letra del contenido de los boxes*/
     margin-top: 15px;
 }
 
-.btn-wsp{
+.btn-wsp{ /*Boton de Whatsapp*/
     position: fixed;
     width: 55px;
     height: 55px;
@@ -277,7 +275,7 @@ h2{
 
 .pie-pagina{
     width: 100%;
-    background-color: aliceblue;
+    background-color: aliceblue; /*Color de fondo del footer*/
 }
 
 .pie-pagina .grupo-1{
@@ -285,7 +283,7 @@ h2{
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);/*Divide en 3 columnas el footer*/
     grid-gap:50px;
     padding: 25px 0px 0px 0px;
     
@@ -298,7 +296,7 @@ h2{
 }
 
 .pie-pagina figure img{
-    width: 225px;
+    width: 225px; /*Le da tamaño a el logo de la marca en el footer*/
 }
 
 .pie-pagina .grupo-1 .box h2{
@@ -308,18 +306,18 @@ h2{
 }
 
 .pie-pagina .grupo-1 .box p{
-    color: #000000;/*color de las letras 2 box*/
+    color: #000000;/*color de las letras de la info de la empresa en el footer*/
     margin-bottom: 10px;
 }
 
 .links{
-    color: #000000;/*color de las letras 3 box*/
+    color: #000000;/*color de las letras de los link de redes sociales del footer*/
     display: flex;
     font-size: 15px;
     line-height: 35px;
 }
 
-.icon{
+.icon{ /*logo de redes sociales en el footer*/
     font-size: 25px;
     padding: 5px;
     margin-bottom: 5px;
@@ -334,14 +332,15 @@ h2{
     border: none;
 }
 
-.pie-pagina .copy{
+.pie-pagina .copy{ /*copyright footer*/
     position: relative;
     display: flex;
     text-align: center;
     font-size: 15px;
 }
 
-/*Inicio Pagina Nosotros*/
+
+/*PAGINA NOSOTROS*/
 
 
 .nosotros{
@@ -352,14 +351,14 @@ h2{
 }
 
 .nosotros p{
-    color: #F1F6F9;
+    color: #F1F6F9; /*Parrafo de descripcion de quienes somos*/
     padding-bottom: 25px;
 }
 
 .section{
     width: 100%;
     min-height: 100vh;
-    background-color: #000f25;
+    background-color: #000f25; /*Color de fondo de los cuadrados de los dueños*/
 }
 
 .container{
@@ -370,12 +369,12 @@ h2{
 }
 
 .content-section{
-    float: left;
+    float: left;/*Mantiene centrada la imagenes*/
     width: 55%;
 }
 
 .image-section{
-    float: right;
+    float: right; /*Mantiene centrada la imagenes*/
     width: 40%;
 }
 
@@ -385,18 +384,18 @@ h2{
 }
 
 .content-section .title{
-    text-transform: uppercase;
+    text-transform: uppercase; /*escribe en mayúsculas todos los caracteres de cada palabra*/
     font-size: 28px;
 }
 
 .content-section .title h2{
-    color: #F1F6F9;
+    color: #F1F6F9; /*Color de los nombres de los dueños*/
     text-align: left;
 }
 
 .content-section .content h4{
     margin-top: 20px;
-    color: #adc719;
+    color: #adc719; /*Color de los rangos de los dueños*/
     font-size: 21px;
 }
 
@@ -405,29 +404,24 @@ h2{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     line-height: 1.5;
-    color: #F1F6F9;
+    color: #F1F6F9; /*Color de las palabras de la presentacion de los dueños*/
 }
 
 .content-section .redes-propietario{
     margin-top: 40px 40px;
 }
 
-.content-section .redes-propietario i{
-    color: #233e21;
-    font-size: 30px;
-    padding: 0px 10px;
-}
 
 
-/*Inicio Pagina Contactos*/
+/*PAGINA CONTACTO*/
 
 
-.container-form{
+.container-form{ /*Formulario de contacto*/
     width: 100%;
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr); /*Divide en 2 al formulario de contacto*/
     grid-gap: 50px;
     margin-top: 90px;
     padding: 10px ;
@@ -444,10 +438,10 @@ h2{
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 30px;
-    color: #F1F6F9;
+    color: #F1F6F9; /*Color de palabras de la info sobre la marca en el formulario*/
 }
 
-.container-form .tamaño-logo{
+.container-form .tamaño-logo{ /*Tamaño del logo de la marca que esta en el formulario*/
     width: 130px;
     height: 130px;
 }
@@ -475,7 +469,7 @@ h2{
     max-height: 150px;
 }
 
-.container-form .btn-enviar{
+.container-form .btn-enviar{ /*Boton de enviar en el formulario*/
     padding: 15px;
     font-size: 16px;
     border: none;
@@ -487,7 +481,7 @@ h2{
     transition: all 300ms ease;
 }
 
-.container-form .btn-enviar:hover{
+.container-form .btn-enviar:hover{ /*Le da color al pasar el cursor al boton de enviar en el formulario*/
     background: #1996c7;
 }
 
@@ -497,7 +491,7 @@ h2{
 }
 
 
-.ubicacion h2{
+.ubicacion h2{ /*Centra el titulo de la ubicacion*/
     text-align: center;
 }
 
@@ -508,7 +502,7 @@ h2{
     padding-right: 35px;
 }
 
-/*inicio responsive*/
+/*INICIO RESPONSIVE*/
 
 @media(max-width:991px){
 
@@ -650,7 +644,7 @@ h2{
 
 
 
-    /* PIE DE PAGINA*/
+    /*FOOTER*/
     
     .pie-pagina .grupo-1{
         width: 90%;
