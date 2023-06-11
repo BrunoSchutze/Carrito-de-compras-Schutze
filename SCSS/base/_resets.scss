@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap'); /*fuente*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif; /*fuente*/
+    background-color: #000000;/*color de fondo de la pagina*/
+    div a{
+        text-decoration: none; /*quita las lineas de los link que bootstrap pone*/
+    }
+    
+}
+
+.container{ /*que se matenga el contenido a esa medidas*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.btn-wsp{ /*Boton de Whatsapp*/
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+}

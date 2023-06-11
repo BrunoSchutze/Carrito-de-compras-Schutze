@@ -1,0 +1,102 @@
+/*Comienzo index*/
+/*iconos*/
+
+.iconos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*separacion entre los iconos*/
+    background-color: $main-color; /*color de fondo*/
+    padding: 10px;
+    img{
+        width: 40px;
+    }
+}
+
+/*Comienzan los productos del index y  PAGINA PRODUCTOS*/
+
+.products{
+    padding: 70px 0 0 0;
+    text-align: center;
+    .tamaño-img{ /*tamaño de las imagenes de los productos*/
+        width: 550px;
+        height: 300px;
+        border-radius: 10px;
+    }
+    h2{
+        color: $main-color;
+        font-size: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        margin-top: 0px;
+    }
+    .products-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);/*acomoda las imagenes en 3 columnas*/
+        grid-gap: 35px;
+    }
+    img{
+        width: 250px;/*tamaño de las imagenes*/
+    }
+    h3{ /*Titulo de los productos*/
+        font-size: 20px;
+        color: $main-color;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    p{ /*Descripcion de los productos*/
+        font-size: 16px;
+        color: #585858;
+        margin-bottom: 10px;
+    }
+    .precio{ /*Color de los precios de los productos*/
+        color: #C69749;
+    }
+    .btn-2{ /*Es el boton para Añadir al carrito*/
+        display: inline-block;
+        padding: 8px 17px;
+        border: 1px solid #ffff;
+        border-radius: 20px;
+        color: #ffff;
+        &:hover{
+            background-color: $black-color;/*le da el color de fondo al boton de añadir al carrito*/
+        }
+    }
+}
+
+/*comienza los servicios*/
+
+.services{
+    margin-top: 100px;
+    padding:  30px 20px;
+    background-color: $black-color;/*Color de fondo de los servicios*/
+    text-align: center;
+    h2{
+        color: $main-color;/*le da el color a los titulos*/
+    }
+    .services-content{ /*divide en 4 cuardros los servicios*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);/*Divide en 2 columnas*/
+        grid-gap: 35px;
+        .service{ /*sombra*/
+            background-color: aliceblue;
+            box-shadow: 0 0 20px rgba(253, 253, 253, 0.2);/*le da una sombra a los boxes*/
+            padding: 35px;
+            text-align: left;
+        }
+        h3{
+            font-size: 20px;
+            color: #585858;/*Color de los titulos de los servicios*/
+            margin-bottom: 10px;
+        }
+        hr{
+            width: 100px;
+            border: 2px solid #adc719;/*color de subrayado de los titulos de los servicios*/
+        }
+        p{
+            font-size: 16px;
+            color: #000000;/*Color de la letra del contenido de los boxes*/
+            margin-top: 15px;
+        }
+    }
+}
+

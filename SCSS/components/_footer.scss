@@ -1,0 +1,58 @@
+/*Comienzo FOOTER*/
+.pie-pagina{
+    width: 100%;
+    background-color: aliceblue; /*Color de fondo del footer*/
+    .grupo-1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /*Divide en 3 columnas el footer*/
+        grid-gap: 50px;
+        padding: 25px 0px 0px 0px;
+        .box{
+            h2{
+                color: #000000; /*color de los titulos boxes*/
+                margin-bottom: 25px;
+                font-size: 20px;
+            }
+            p{
+                color: #000000; /*color de las letras de la info de la empresa en el footer*/
+                margin-bottom: 10px;
+            }
+            figure{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                img{
+                    width: 225px; /*Le da tamaño a el logo de la marca en el footer*/
+                }
+            }
+            .links {
+                color: #000000; /*color de las letras de los link de redes sociales del footer*/
+                display: flex;
+                font-size: 15px;
+                line-height: 35px;
+            }
+            .icon { /*logo de redes sociales en el footer*/
+                font-size: 25px;
+                padding: 5px;
+                margin-bottom: 5px;
+                margin-right: 5px;
+                &:hover {
+                    background-color: #F1F6F9;
+                }
+            }
+        }
+    }
+    hr {
+        border: none;
+    }
+    .copy { /*copyright footer*/
+        position: relative;
+        display: flex;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+

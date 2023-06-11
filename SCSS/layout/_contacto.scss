@@ -1,0 +1,78 @@
+/*INICIO CONTACTO*/
+
+.container-form{ /*Formulario de contacto*/
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /*Divide en 2 al formulario de contacto*/
+    grid-gap: 50px;
+    margin-top: 90px;
+    padding: 10px ;
+    border: 1px solid white;
+    border-radius: 10px;
+    .info-form{
+        padding-bottom: 15px;
+        padding-left: 15px;
+        h2{
+            margin-bottom: 15px;
+            font-size: 35px;
+        }
+        p{
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: $main-color; /*Color de palabras de la info sobre la marca en el formulario*/
+        }
+        a{
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .tamaño-logo{ /*Tamaño del logo de la marca que esta en el formulario*/
+            width: 130px;
+            height: 130px;
+        }
+    }
+    form .campo, textarea{
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 15px;
+        border: 1px solid $black-color;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        outline: 0px;
+    }
+    textarea{
+        max-width: 530px;
+        min-height: 530px;
+        min-height: 140px;
+        max-height: 150px;
+    }
+    .btn-enviar{ /*Boton de enviar en el formulario*/
+        padding: 15px;
+        font-size: 16px;
+        border: none;
+        outline: 0px;
+        background-color: rgb(2, 53, 148);
+        color: $main-color;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 300ms ease;
+        &:hover{ /*Le da color al pasar el cursor al boton de enviar en el formulario*/
+            background: #1996c7;
+        }
+    }
+}
+
+.ubicacion{ /*Centra el titulo de la ubicacion*/
+    h2{ /*Centra el titulo de la ubicacion*/
+        text-align: center;
+    }
+    .mapa{ /*mapa de la empresa*/
+        width: 100%;
+        height: 400px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
