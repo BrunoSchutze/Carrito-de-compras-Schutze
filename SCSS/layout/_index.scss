@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /*separacion entre los iconos*/
-    background-color: $main-color; /*color de fondo*/
+    background-color: #000f25; /*color de fondo*/
     padding: 10px;
     img{
         width: 40px;
@@ -58,7 +58,7 @@
         border-radius: 20px;
         color: #ffff;
         &:hover{
-            background-color: $black-color;/*le da el color de fondo al boton de añadir al carrito*/
+            background-color: #000f25;/*le da el color de fondo al boton de añadir al carrito*/
         }
     }
 }
@@ -68,7 +68,7 @@
 .services{
     margin-top: 100px;
     padding:  30px 20px;
-    background-color: $black-color;/*Color de fondo de los servicios*/
+    background-color: #000f25;/*Color de fondo de los servicios*/
     text-align: center;
     h2{
         color: $main-color;/*le da el color a los titulos*/

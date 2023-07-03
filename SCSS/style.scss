@@ -1,3 +1,7 @@
+/*IMPORTS BASE*/
+@import 'base/variables';
+@import 'base/resets';
+@import 'base/utilidades';
 
 /*IMPORTS LAYOUT*/
 @import 'layout/_index';
@@ -10,8 +14,3 @@
 /*IMPORTS COMPONENTS*/
 @import 'components/footer';
 @import 'components/navbar';
-
-/*IMPORTS BASE*/
-@import 'base/resets';
-@import 'base/variables';
-@import 'base/utilidades';
