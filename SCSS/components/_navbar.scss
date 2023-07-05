@@ -11,92 +11,106 @@
     display: flex;
     align-items: center;
     min-height: 70vh;/*definicion de altura*/
-    .menu{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex; /*forma horizontal*/
-        align-items: center; /*centra el menu*/
-        justify-content: space-between;/*deja separacion*/
-        .navbar{ 
-            ul li{ 
-                position: relative;
-                float: left;/*pone en horizontal el menu*/
-                a{ /*letras del menu*/
-                    font-size: 18px;
-                    padding: 20px;
-                    color: #F1F6F9; /*color de las letras del menu*/
-                    display: block; 
-                    font-weight: 600;
-                    &:hover{ /*le da color cuando paso el cursor a las letras del menu*/
-                        color: #000f25;
-                    }
-                }
-            }
-        }
-        label{
-            cursor: pointer;/* le da efecto al cursor*/
-            display: none;
-        }
-    }
-    .logo-menu{ /*imagen del logo del menu*/
-        width: 70px;
-        height: 60px;
-        padding-left: 15px;
-        cursor: pointer;
-    }
-    #menu{
-        display: none; /*oculta*/
-    }
-    .menu-icono{ /*ancho del logo hamburguesa del menu*/
-        width: 25px;
-    }
-    .submenu{
-        position: relative;
-        #img-carrito{
-            padding-right: 15px;
-        }
-        #carrito{
-            display: none;/*oculta*/
-        }
-        &:hover #carrito{
-            display: block;
-            position: absolute;
-            right: 0;
-            backdrop-filter: blur(10px); /*hace que se vea un poco mas opaco*/
-            top: 100%;
-            z-index: 1;/*hace que se posiciones adelante*/
-            background-color: #4E4B5076;
-            padding: 20px;
-            min-width: 400px;
-        }
-        table{
-            width: 100%;/*modifica el menu de hamburguesa*/
-            th, td{
-                color:#ffff;/*color de las letras dl menu de hamburguesa*/
-            }
-        }
-        .borrar{
-            background-color: rgb(104, 21, 0);/*color de borrar en el menu de hamburguesa*/
-            border-radius: 100%;
-            padding: 0px 5px;
-            color: aliceblue;
-            font-weight: 800;
-        }
-    }
-    .header-txt{
-        padding: 0 200px;
-        text-align: center;
-        h1{
-            font-size: 70px;
-            line-height: 80px;/*tamaño de la letra*/
-            color: aliceblue;
-            margin-bottom: 20px;
-        }
-        p{
-            font-size: 16px;
-            color: #F1F6F9;
-        }
-    }
+    
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex; /*forma horizontal*/
+    align-items: center; /*centra el menu*/
+    justify-content: space-between;/*deja separacion*/
+}
+
+.logo-menu{ /*imagen del logo del menu*/
+    width: 70px;
+    height: 60px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.menu .navbar ul li{ 
+    position: relative;
+    float: left;/*pone en horizontal el menu*/
+}
+
+.menu .navbar ul li a{ /*letras del menu*/
+    font-size: 18px;
+    padding: 20px;
+    color: #F1F6F9; /*color de las letras del menu*/
+    display: block; 
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{ /*le da color cuando paso el cursor a las letras del menu*/
+    color: #000f25;
+}
+
+#menu{
+    display: none; /*oculta*/
+}
+.menu-icono{ /*ancho del logo hamburguesa del menu*/
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;/* le da efecto al cursor*/
+    display: none;
+}
+.submenu{
+    position: relative;
+}
+
+.submenu #img-carrito{
+    padding-right: 15px;
+}
+
+.submenu #carrito{
+    display: none;/*oculta*/
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px); /*hace que se vea un poco mas opaco*/
+    top: 100%;
+    z-index: 1;/*hace que se posiciones adelante*/
+    background-color: #4E4B5076;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table{
+    width: 100%;/*modifica el menu de hamburguesa*/
+}
+
+th, td{
+    color:#ffff;/*color de las letras dl menu de hamburguesa*/
+}
+
+.borrar{
+    background-color: rgb(104, 21, 0);/*color de borrar en el menu de hamburguesa*/
+    border-radius: 100%;
+    padding: 0px 5px;
+    color: aliceblue;
+    font-weight: 800;
+}
+.header-txt{
+    padding: 0 200px;
+    text-align: center;
+}
+
+.header-txt h1{
+    font-size: 70px;
+    line-height: 80px;/*tamaño de la letra*/
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.header-txt p{
+    font-size: 16px;
+    color: #F1F6F9;
 }

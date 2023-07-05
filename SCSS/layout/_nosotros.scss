@@ -5,9 +5,13 @@ a{
     color: #fff;
 }
 
+html{
+    font-size: 10px;
+}
+
 section{
-    padding: 10rem 0;
-    background-color: #fff;
+    padding: 5rem 0;
+    background-color: #000;
 }
 
 .heading{
@@ -17,7 +21,7 @@ section{
     margin-right: -3px;
     margin-bottom: 5rem;
     text-align: center;
-    color: #333;
+    color: #f1f6f9;
     position: relative;
 }
 
@@ -25,7 +29,7 @@ section{
     content: "";
     width: 10rem;
     height: .8rem;
-    background-color: #45e19f;
+    background-color: #000f25;
     position: absolute;
     bottom: -2rem;
     left: 50%;
@@ -82,20 +86,22 @@ section{
 }
 
 .about{
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
-    font-style: italic;
+    font-size: 1.0rem;
+    margin: 1.0rem 0;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     color: #333;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .card .btn{
     padding: 1rem 2.5rem;
-    background-color: #445ae3;
+    background-color: rgb(2, 53, 148);
     border-radius: 2rem;
     margin: 1rem 0;
     text-transform: uppercase;
-    color: #eee;
+    color: #f1f6f9;
     font-size: 1.4rem;
 }
 
@@ -105,48 +111,23 @@ section{
 }
 
 .social-media{
-    width: 100%;
+    width: 85%;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     margin: 1.5rem;
     border-top: 1px solid rgb(0,0,0,.1);
 }
 
-.social-media i{
+.social-media{
     font-size: 3rem;
     transition: color .5s;
+    .icon-dos{ /*logo de redes sociales en el footer*/
+        font-size: 25px;
+        padding: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
 }
 
-.fa-facebook-square{
-    color: #3b5999;
-}
-
-.fa-twitter-square{
-    color: #55acee;
-}
-
-.fa-instagram{
-    color: #e6683c;
-}
-
-.fa-google-plus-square{
-    color: #dd4b39;
-}
-
-.fa-facebook-square:hover{
-    color: #333;
-}
-
-.fa-twitter-square:hover{
-    color: #333;
-}
-
-.fa-instagram:hover{
-    color: #333;
-}
-
-.fa-google-plus-square:hover{
-    color: #333;
-}

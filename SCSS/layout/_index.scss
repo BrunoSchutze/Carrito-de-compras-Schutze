@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /*separacion entre los iconos*/
-    background-color: #000f25; /*color de fondo*/
+    background-color: #f1f6f9; /*color de fondo*/
     padding: 10px;
     img{
         width: 40px;
@@ -18,12 +18,12 @@
     padding: 70px 0 0 0;
     text-align: center;
     .tamaño-img{ /*tamaño de las imagenes de los productos*/
-        width: 550px;
+        
         height: 300px;
         border-radius: 10px;
     }
     h2{
-        color: $main-color;
+        color: #f1f6f9;
         font-size: 40px;
         margin-bottom: 40px;
         text-align: center;
@@ -39,13 +39,13 @@
     }
     h3{ /*Titulo de los productos*/
         font-size: 20px;
-        color: $main-color;
+        color:#f1f6f9;
         margin-bottom: 10px;
         margin-top: 10px;
     }
     p{ /*Descripcion de los productos*/
         font-size: 16px;
-        color: #585858;
+        color: #777777;
         margin-bottom: 10px;
     }
     .precio{ /*Color de los precios de los productos*/
@@ -71,7 +71,10 @@
     background-color: #000f25;/*Color de fondo de los servicios*/
     text-align: center;
     h2{
-        color: $main-color;/*le da el color a los titulos*/
+        color: #f1f6f9;/*le da el color a los titulos*/
+        font-size: 35px;
+        margin-bottom: 20px;
+        margin-top: 0px;
     }
     .services-content{ /*divide en 4 cuardros los servicios*/
         display: grid;

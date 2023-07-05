@@ -1,37 +1,44 @@
 /*INICIO RESPONSIVE*/
 
 @media(max-width:991px){
-    .menu{
-        padding: 20px;
+    .header{
+        .menu{
+            padding: 20px;
+            label{
+                display: initial;
+            }
+            .navbar{
+                position: absolute;
+                top:100%;
+                left: 0;
+                right: 0;
+                background-color: #212A3E;
+                display: none;
+                ul li{
+                    width: 100%;
+                }
+            }
+        }
+        #menu:checked ~ .navbar{
+            display: initial;
+        }
+        .logo{
+            display: none;
+        }
+        .submenu:hover #carrito{
+            min-width: 100%;
+        }
+        
+        .logo-menu{
+            display: none;
+        }
     }
-    .menu label{
-        display: initial;
-    }
-    .menu .navbar{
-        position: absolute;
-        top:100%;
-        left: 0;
-        right: 0;
-        background-color: #212A3E;
-        display: none;
-    }
-    .menu .navbar ul li{
-        width: 100%;
-    }
-    #menu:checked ~ .navbar{
-        display: initial;
-    }
-    .submenu:hover #carrito{
-        min-width: 100%;
-    }
-    .logo-menu{
-        display: none;
-    }
+    
     .iconos{
         display: flex;
         align-items: center;
         justify-content: space-between; /*separacion entre los iconos*/
-        background-color: $main-color; /*color de fondo*/
+        background-color: #f1f6f9; /*color de fondo*/
         padding: 5px;
     }
     .icono img{
@@ -48,17 +55,18 @@
     }
     .products {
         padding: 30px;
+        .products-content {
+            grid-template-columns: repeat(1,1fr);
+        }
     }
-    .products-content {
-        @include responsive-columns;
-    }
+    
     .services{
         padding: 30px;
         margin: 0;
     }
     
     .services .services-content{
-        @include responsive-columns;
+        grid-template-columns: repeat(1,1fr);
     }
     
     /*NOSOTROS*/
@@ -70,7 +78,7 @@
         max-width: 1100px;
         margin: auto;
         display: grid;
-        @include responsive-columns;
+        grid-template-columns: repeat(1,1fr);
         grid-gap: 50px;
         margin-top: 90px;
         padding: 10px ;
@@ -80,24 +88,54 @@
     .container-form .tamaño-logo{
         display: none;
     }
+
     /*FOOTER*/
-    .pie-pagina .grupo-1{
-        width: 90%;
-        @include responsive-columns;
-        grid-gap: 30px;
-        padding: 35px 0px;
-    }
-    .pie-pagina .grupo-1 .box p{
+    .pie-pagina .copy { /*copyright footer*/
         text-align: center;
-        width: 90%;
+        align-items: center;
+        font-size: 10px;
     }
-    .links{
-        display: inline;
+}
+
+@media screen and (min-width:700px){
+    .card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
-    .pie-pagina .grupo-1 .box figure img  {
-        display: none;
+    
+    .card{
+        margin: 2rem;
+        transition: transform .5s;
     }
-    .pie-pagina figure img{
-        display: none;
+    
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
     }
+    .card:nth-child(1){
+        animation:fadeIn .5s .5s backwards;
+    }
+    
+    .card:nth-child(2){
+        animation:fadeIn .5s .1s backwards;
+    }
+    
+    .card:nth-child(3){
+        animation:fadeIn .5s 1.5s backwards;
+    }
+    
+    .card:nth-child(4){
+        animation:fadeIn .5s 2s backwards;
+    }
+    
+    .card:hover{
+        transform: scale(1.05);
+    }
+    
 }
