@@ -1,69 +1,78 @@
 const carrito = document.getElementById('carrito');
-const elemento1 = document.getElementById('lista-1');
-const elemento2 = document.getElementById('lista-2');
+const elementos = document.querySelectorAll('.agregar-carrito');
 const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
 cargarEventListeners();
 
-function cargarEventListeners(){
-    elemento1.addEventListener('click', compraElemento);
-    elemento2.addEventListener('click', compraElemento);
+function cargarEventListeners() {
+    for (const elemento of elementos) {
+        elemento.addEventListener('click', compraElemento);
+    }
     carrito.addEventListener('click', eliminarElemento);
-    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito); // Vincula el evento click con la función vaciarCarrito.
 }
 
-function compraElemento(e){
+
+function compraElemento(e) {
     e.preventDefault();
-    if(e.target.classList.contains('agregar-carrito')){
-        const elemento = e.target.parentElement.parentElement;
+    const elemento = e.target.parentElement;
+
+    if (elemento.classList.contains('agregar-carrito')) {
         leerDatosElemento(elemento);
     }
 }
+
 
 function leerDatosElemento(elemento){
     const infoElemento = {
         imagen: elemento.querySelector('img').src,
         titulo: elemento.querySelector('h3').textContent,
         precio: elemento.querySelector('.precio').textContent,
-        id: elemento.querySelector('a').getAttribute('data-id')
+        id: elemento.getAttribute('data-id')
     }
     insertarCarrito(infoElemento);
 }
 
-function insertarCarrito(elemento){
+function vaciarCarrito() {
+    while (lista.firstChild) {
+        lista.removeChild(lista.firstChild);
+    }
+}
+
+function insertarCarrito(infoElemento) {
     const row = document.createElement('tr');
     row.innerHTML = `
-        <td>
-            <img src="${elemento.imagen}" width=100>
-        </td>
-        <td>
-            ${elemento.titulo}
-        </td>
-        <td>
-            ${elemento.precio}
-        </td>
-        <td>
-            <a herf="#" class="borrar" data-id="${elemento.id}">x</a>
-        </td>
+        <td><img src="${infoElemento.imagen}" width="100"></td>
+        <td>${infoElemento.titulo}</td>
+        <td>${infoElemento.precio}</td>
+        <td><a href="#" class="borrar-elemento" data-id="${infoElemento.id}">X</a></td>
     `;
     lista.appendChild(row);
 }
 
-function eliminarElemento(e){
+function eliminarElemento(e) {
     e.preventDefault();
-    let elemento,
-        elementoId;
-    
-    if(e.target.classList.contains('borrar')){
+    if (e.target.classList.contains('borrar-elemento')) {
         e.target.parentElement.parentElement.remove();
-        elemento = e.target.querySelector('a').getAttribute('data-id');
     }
 }
 
-function vaciarCarrito(){
-    while(lista.firstChild){
-        lista.removeChild(lista.firstChild);
+
+
+// Función para saludar al usuario con un mensaje personalizado
+function saludarUsuario() {
+    const nombreUsuario = prompt('Por favor, ingresa tu nombre:');
+    
+    if (nombreUsuario) {
+        const mensaje = `¡Hola, ${nombreUsuario}! Bienvenido(a) a JTVasos. Esperamos que disfrutes explorando nuestros productos.`;
+        alert(mensaje);
     }
-    return false;
 }
+
+// Llamar a la función de saludo cuando la página se haya cargado completamente
+window.onload = function() {
+    saludarUsuario();
+};
+
+
