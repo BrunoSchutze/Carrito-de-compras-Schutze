@@ -55,25 +55,6 @@ const productos = [
         "precio": 500,
         "imagen": "./images/VasosSMIRNOFF.jpeg"
     },
-    {
-        "id": 10,
-        "titulo": "Skyy",
-        "precio": 800,
-        "imagen": "../images/VasoSKYY.jpeg"
-    },
-    {
-        "id": 11,
-        "titulo": "Havana 2.0",
-        "precio": 500,
-        "imagen": "../images/VasoHAVANA.jpeg"
-    },
-    {
-        "id": 12,
-        "titulo": "Cerveza Green",
-        "precio": 500,
-        "imagen": "../images/VasoCERVEZA.jpeg"
-    },
-    
 ];
 
 const carrito = document.getElementById('carrito');
@@ -83,7 +64,6 @@ const agregarProductos = document.querySelectorAll('.agregar-carrito');
 
 let carritoItems = [];
 
-cargarEventListeners();
 
 function cargarEventListeners() {
     agregarProductos.forEach(producto => {
@@ -103,14 +83,13 @@ function compraElemento(e) {
 
 function agregarAlCarrito(producto) {
     carritoItems.push(producto);
-    mostrarCarrito();
     guardarCarritoEnLocalStorage();
+    mostrarCarrito();
 }
 
 function guardarCarritoEnLocalStorage() {
     localStorage.setItem('carrito', JSON.stringify(carritoItems));
 }
-
 
 function mostrarCarrito() {
     limpiarHTML();
@@ -124,7 +103,6 @@ function mostrarCarrito() {
             <td><img src="${producto.imagen}" width="100"></td>
             <td>${producto.titulo}</td>
             <td>${producto.precio}</td>
-            <td><a href="#" class="borrar-elemento" data-id="${producto.id}">X</a></td>
         `;
         lista.appendChild(row);
     });
@@ -146,6 +124,7 @@ function eliminarElemento(e) {
         guardarCarritoEnLocalStorage();
     }
 }
+
 
 function vaciarCarrito() {
     carritoItems = [];
